@@ -1,0 +1,11 @@
+-- P1B-02: Add `sf_refresh_token_encrypted` to `sessions` — the per-specialist
+-- Salesforce OAuth refresh token, stored as AES-256-GCM ciphertext. Held
+-- server-side only (TR-AUTH-3, SEC-AUTH-2); it never reaches the cookie or the
+-- browser. `/auth/callback` (E-02) writes it; `/auth/refresh` (P1B-03) reads it.
+--
+-- Nullable with no default: a session row can structurally exist before the
+-- exchange wires a token, and the column is a Demo-Mode-only artifact — at the
+-- Production substrate swap the session moves to Redis and the refresh token to
+-- AWS Secrets Manager (TR-AUTH-6), so this column is dropped, not migrated.
+-- ERD §6.8 amended to match.
+ALTER TABLE "sessions" ADD COLUMN "sf_refresh_token_encrypted" text;

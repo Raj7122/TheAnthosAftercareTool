@@ -1,0 +1,63 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+dist/
+build/
+out/
+.next/
+.turbo/
+.vercel/
+*.tsbuildinfo
+
+# P3C-01: Serwist (@serwist/next) compiles `apps/web/sw.ts` into
+# `apps/web/public/sw.js` at build time. The compiled SW is a build
+# artifact — only the source TS is checked in.
+apps/web/public/sw.js
+apps/web/public/sw.js.map
+apps/web/public/swe-worker-*.js
+apps/web/public/swe-worker-*.js.map
+apps/web/public/workbox-*.js
+apps/web/public/workbox-*.js.map
+
+# Test / coverage
+coverage/
+.nyc_output/
+
+# Playwright (E2E)
+test-results/
+playwright-report/
+blob-report/
+.playwright/
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.idea/
+*.swp
+*.swo
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+.vercel
+
+# Supabase CLI link state. supabase/.temp/pooler-url embeds the DB password.
+# We use Drizzle for migrations, not supabase/migrations/ — entire dir is
+# local-dev only. Remove this rule if/when Supabase migrations are adopted.
+supabase/

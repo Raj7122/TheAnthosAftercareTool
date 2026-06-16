@@ -1,0 +1,25 @@
+{
+  "name": "@anthos/audit",
+  "version": "0.0.0",
+  "private": true,
+  "description": "M-AUDIT: audit_log writer, no-PII assertions, hash-chain interface (Pattern B).",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./errors": "./src/errors.ts",
+    "./no-pii": "./src/no-pii.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthos/persistence": "workspace:*",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}

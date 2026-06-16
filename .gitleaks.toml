@@ -1,0 +1,21 @@
+# Gitleaks config — extends the default ruleset with repo-specific
+# allowlists for known-safe patterns that trip the generic high-entropy
+# detector. Tune here rather than `--no-verify`-bypassing per the
+# `.githooks/pre-commit` policy comment.
+#
+# When adding a new allowlist, scope it tightly: a single regex pattern,
+# pinned to the smallest set of paths possible. Repo-wide allowlists defeat
+# the hook's purpose.
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "P1H-03 stable wire-key string `voucher_critical_<N>d` — these are tag identifiers shared between the domain function and its tests, not credentials. The generic-api-key rule fires on the mixed-case alphanumeric shape."
+regexes = [
+  '''voucher_critical_\d+d''',
+]
+paths = [
+  '''packages/api/test/caseload/dto\.test\.ts''',
+  '''packages/domain/test/tags/derive-row-tags\.test\.ts''',
+]

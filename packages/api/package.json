@@ -1,0 +1,28 @@
+{
+  "name": "@anthos/api",
+  "version": "0.0.0",
+  "private": true,
+  "description": "BFF endpoints. Next.js route handlers wire here.",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --root ../.. packages/api/test"
+  },
+  "dependencies": {
+    "@anthos/audit": "workspace:*",
+    "@anthos/auth": "workspace:*",
+    "@anthos/domain": "workspace:*",
+    "@anthos/feature-flags": "workspace:*",
+    "@anthos/integrations": "workspace:*",
+    "@anthos/logging": "workspace:*",
+    "@anthos/persistence": "workspace:*",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}

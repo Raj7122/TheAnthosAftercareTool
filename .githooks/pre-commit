@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+#
+# Pre-commit hook: gitleaks staged-secret scan.
+#
+# Why: project rules forbid PII/secrets in commits, logs, URLs, or
+# audit metadata. This hook catches secrets and obvious PII shapes BEFORE
+# they hit history, where remediation is expensive (force-pushes, rotations,
+# audit trail damage).
+#
+# Opt in (one-time per clone):
+#   git config core.hooksPath .githooks
+#
+# Bypass (use only with explicit justification, e.g. fixture data):
+#   git commit --no-verify
+#
+# Configuration: tune `.gitleaks.toml` at repo root if a known-safe pattern
+# trips the default ruleset. Do NOT bypass the hook by default — fix the
+# false positive in config so the next engineer doesn't hit it.
+
+set -euo pipefail
+
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "pre-commit: gitleaks not installed."
+  echo "  brew install gitleaks   # macOS"
+  echo "  https://github.com/gitleaks/gitleaks#installing"
+  exit 1
+fi
+
+gitleaks protect --staged --verbose --redact

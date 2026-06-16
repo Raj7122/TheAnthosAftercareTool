@@ -1,0 +1,38 @@
+{
+  "name": "@anthos/web",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Next.js 15 App Router host: Salesforce-Console iframe (desktop) + tablet PWA.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthos/api": "workspace:*",
+    "@anthos/domain": "workspace:*",
+    "@anthos/logging": "workspace:*",
+    "@radix-ui/react-slot": "^1.1.1",
+    "@serwist/next": "^9.5.11",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "idb-keyval": "^6.2.4",
+    "lucide-react": "^0.469.0",
+    "next": "15.5.18",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "serwist": "^9.5.11",
+    "tailwind-merge": "^2.5.5",
+    "zustand": "^5.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.6.0"
+  }
+}

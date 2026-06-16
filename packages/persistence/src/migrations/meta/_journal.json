@@ -1,0 +1,97 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1779124159706,
+      "tag": "0000_init_configuration",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1779754200000,
+      "tag": "0001_add_tier_invariants",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1779840600000,
+      "tag": "0002_init_phase_1_foundation",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1779927000000,
+      "tag": "0003_add_session_token_hash",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1780013400000,
+      "tag": "0004_add_session_sf_refresh_token",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1780099800000,
+      "tag": "0005_add_rate_limits",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1780186200000,
+      "tag": "0006_add_session_identity",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1780272600000,
+      "tag": "0007_add_caseload_cache",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1780359000000,
+      "tag": "0008_add_cdc_health",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1780445400000,
+      "tag": "0009_add_barrier_severity_weights",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1780531800000,
+      "tag": "0010_add_offline_queue",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1780618200000,
+      "tag": "0011_enable_rls_public_tables",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "7",
+      "when": 1780704600000,
+      "tag": "0012_add_days_since_contact_cap",
+      "breakpoints": true
+    }
+  ]
+}

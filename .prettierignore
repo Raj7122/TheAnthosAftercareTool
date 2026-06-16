@@ -1,0 +1,16 @@
+node_modules
+dist
+.next
+coverage
+pnpm-lock.yaml
+*.tsbuildinfo
+
+# Authored prose — Prettier should not reformat it.
+README.md
+
+# Static assets / spike artifacts under apps/web/public/ are not source code.
+apps/web/public/**
+
+# Generated / tool-managed files.
+apps/web/.next/**
+apps/web/next-env.d.ts
